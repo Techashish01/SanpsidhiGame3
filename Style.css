@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  /* background-color: rgb(219, 219, 207); */
+  background-image: url("https://img.freepik.com/premium-photo/green-snake-is-branch-natural-background-around-forest_776674-274368.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cont {
+  display: grid;
+  width: 600px;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 0px  0px 0;
+  margin-top: 75px;
+  margin-left: 10px;
+}
+
+.cont div {
+  width: 60px;
+  height: 60px;
+  border: 0.2px solid black;
+}
+
+#p1,
+#p2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: rgb(236, 82, 82);
+  position: relative;
+  border: 3px solid black;
+
+  /* position: absolute; */
+}
+
+#p1 {
+  position: relative;
+  top: 0px;
+  transition: all linear 0.9s;
+  /* top: 0; */
+  left: -62px;
+  z-index: 2;
+}
+
+#p2 {
+  z-index: 2;
+  position: relative;
+  top: -55px;
+  left: -62px;
+  transition: all linear 0.5s;
+  background-color: rgb(243, 181, 46);
+}
+
+img {
+  position: relative;
+  top: -615px;
+  left: 8px;
+  /* z-index: -1; */
+  margin: -10px;
+  margin-left: 2px;
+  width: 625px;
+  height: 625px;
+}
+#diceCont {
+  height: 150px;
+  width: 300px;
+  border-radius: 15px;
+  border: 2px solid black;
+  background-color: rgb(20, 20, 46);
+  color: rgb(201, 173, 173);
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  font-size: 2rem;
+  z-index: 99;
+}
+#diceBtn {
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  background-color: rgb(243, 227, 1);
+  font-size: 25px;
+  border-radius: 25px;
+  width: 200px;
+}
+@media (max-width: 480px) {
+  #p1, #p2 {
+    width: 30px;
+    height: 30px;
+  }
+
+  #diceCont {
+    font-size: 1.2rem;
+  }
+
+  body {
+    background-position: center;
+  }
+}
